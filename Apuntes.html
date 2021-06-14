@@ -1,0 +1,114 @@
+<!--
+    APUNTES SELECTORES AVANZADOS Y PSEUDOCLASES
+
+    -los bugs en el inspector hay que revisarlos!
+
+    -formularios:
+    cosas extra
+    -agregar value a los select en option
+    -label: ayuda para la accesibilidad
+    tiene que envolver el input
+
+    name/value
+    -name: sirve para que el navegador identifique que elemento es
+    cada uno. Eventualmente con javascript lo levantamos y con eso
+    hacemos magias
+    En checkbox y radio, hay que mostrar que estan relacionados por eso siempre
+    pongo el mismo name
+
+    -value: es algo que ve el usuario, es lo que el usuario ingresa en el input
+    con eso puede predeterminar lo que escriba tmb.
+    Y mas adelante, es lo que entra en la base de datos
+
+    Como poner una linea abajo de otra en el formulario de manera prolija?
+    Es una decision de estetica, asi que sugieren que se haga desde css.
+    Opcion: ponerle display block, para que actuen como elemento en linea.
+    Pero, de vueeelta no es lo mejor, siempre esta flexbox!!
+    
+    
+
+    block: no compartas tu espacio horizontal
+    inline-block: comparti tu espacio horizontal
+    inline: no comparte el espacio, pero no queda sometido a box model, osea no puede 
+    tener padding, margin, etc Tratar de no usar!!!
+
+    Tipos de selectores avanzados de CSS
+    -Selectores simples
+      -Etiqueta
+      -Clase
+      -ID
+    Reglas de especificidad: id le gana a los dos, clase le gana etiqueta, 
+    etiqueta no le gana a nadie
+
+    -Selectores combinados
+    Nos permiten seleccionar un elemento a partir de su relacion con otro
+
+    -Selector por descendencia: todos los elementos que sean descendientes de un 
+    elemento en particular van a terminar determinado estilo
+    Sintaxis: UN ESPACIO
+    .lista-tema-actual li {
+        background-color: green
+    }
+
+    -Selector por hijo:
+    Elijo todos los elementos que son hijos DIRECTO de otro
+    Sintaxis:
+    div > h4 {
+        background-color: green
+    }
+
+    -Selector hermano adyacente: 
+    el elemento que viene inmediatamente despues del hermano que tiene esa clase
+    
+   
+    .primero + li {
+        background-color: green
+    }
+
+    - Selector hermano general: los elementos que tengan como hermano MAYOR
+    un elemento con cierta propiedad. Es decir aparece, antes de ellos
+     .primero ~ li {
+        background-color: green
+    }
+
+PSEUDOCLASES:
+Son para seleccionar un estado de ese elemento, no el elemento en si
+Se escriben con elemento:hover
+
+Hover: cuando el mouse pasa por encima del elemento
+elemento:hover {
+    background-color: darkgreen
+}
+
+Visited: link visitado
+Active: el momento en que el usuario esta haciendo el click
+Focus: el elemento esta en foco, porque le hice click con el mouse o lo seleccione
+con el teclado seleccionando TAB
+Los links, los botones y los elementos de formulario son susceptibles 
+de aparecer en foco.
+
+
+Pseudoclases especificas para formularios:
+-Checked:
+Me permite estilar solo los elementos que estan checkeados. Le pone el
+estilo al cuadradito.
+
+-Placeholder:
+shown: modifica los elementos donde haya un placeholder mostrandose
+no afecta al placeholder en si. Sirve para cambiar el estado de cuando el usuario
+empieza a interactuar
+
+Pseudoelementos: se seleccionan con ::
+-Placeholder: es un elemento que tiene un estado, por eso esta en esta categoria
+-First-letter: la primera letra de todos los textos
+-Selection: para cuando selecciono texto en la pagina.
+
+
+-Selectores por atributos:
+
+Repaso de GIT
+-Describir lo mejor posible lo que hago en el commit
+
+
+
+-->

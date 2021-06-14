@@ -1,0 +1,7 @@
+.parrafo3, .impar, .par {
+    color: red;
+} 
+
+.parrafo2 ~ p {
+    color: red;
+}
